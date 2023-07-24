@@ -14,6 +14,10 @@ class PriceController extends Controller
 {   
     use ResponseTrait;
 
+    public function getMarqueeText(){
+        return $this->success("get text","Placeholder Text For Moving Text Message");
+    }
+
     public function getLocalPrices(Request $request){
         $item_name=$request->item_name;
 

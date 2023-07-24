@@ -31,6 +31,8 @@ Route::get('/global/cities/{country}',[PriceController::class,'getGlobalCities']
 
 Route::get('/items',[PriceController::class,'getItems']);
 
+Route::get('/marquee_text',[PriceController::class,'getMarqueeText']);
+
 Route::get('/prices/local/{state}/{city}/{item_name}',[PriceController::class,'getLocalPrices']);
 Route::get('/prices/global/{country}/{city}/{item_name}',[PriceController::class,'getGlobalPrices']);
 
