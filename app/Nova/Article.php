@@ -48,7 +48,7 @@ class Article extends Resource
             Text::make('title'),
             Markdown::make('description'),
             Markdown::make('news_details'),
-            Image::make('image_url')->disk('public')->path('images')->required()->prunable(),
+            Text::make('image_url'),
             Select::make('news_type')->options([
                 'Local' => 'local',
                 'Global' => 'global',
