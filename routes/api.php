@@ -34,5 +34,5 @@ Route::get('/items',[PriceController::class,'getItems']);
 Route::get('/prices/local/{state}/{city}/{item_name}',[PriceController::class,'getLocalPrices']);
 Route::get('/prices/global/{country}/{city}/{item_name}',[PriceController::class,'getGlobalPrices']);
 
-// Route::get('/prices/random/local',[PriceController::class,'addLocalItems']);
-// Route::get('/prices/random/global',[PriceController::class,'addGlobalItems']);
+Route::get('/prices/random/local',[PriceController::class,'addLocalItems']);
+Route::get('/prices/random/global',[PriceController::class,'addGlobalItems']);
