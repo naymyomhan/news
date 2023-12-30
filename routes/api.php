@@ -20,21 +20,21 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/news/{type}',[NewsController::class,'getNews']);
+Route::get('/news/{type}', [NewsController::class, 'getNews']);
 
 
-Route::get('/local/states',[PriceController::class,'getLocalStates']);
-Route::get('/local/cities/{state}',[PriceController::class,'getLocalCities']);
+Route::get('/local/states', [PriceController::class, 'getLocalStates']);
+Route::get('/local/cities/{state}', [PriceController::class, 'getLocalCities']);
 
-Route::get('/global/countries',[PriceController::class,'getGlobalCountries']);
-Route::get('/global/cities/{country}',[PriceController::class,'getGlobalCities']);
+Route::get('/global/countries', [PriceController::class, 'getGlobalCountries']);
+Route::get('/global/cities/{country}', [PriceController::class, 'getGlobalCities']);
 
-Route::get('/items',[PriceController::class,'getItems']);
+Route::get('/items', [PriceController::class, 'getItems']);
 
-Route::get('/marquee_text',[PriceController::class,'getMarqueeText']);
+Route::get('/marquee_text', [PriceController::class, 'getMarqueeText']);
 
-Route::get('/prices/local/{state}/{city}/{item_name}',[PriceController::class,'getLocalPrices']);
-Route::get('/prices/global/{country}/{city}/{item_name}',[PriceController::class,'getGlobalPrices']);
+Route::get('/prices/local/{state}/{city}/{item_name}', [PriceController::class, 'getLocalPrices']);
+Route::get('/prices/global/{country}/{city}/{item_name}', [PriceController::class, 'getGlobalPrices']);
 
-Route::get('/prices/random/local',[PriceController::class,'addLocalItems']);
-Route::get('/prices/random/global',[PriceController::class,'addGlobalItems']);
+Route::get('/prices/random/local', [PriceController::class, 'addLocalItems']);
+Route::get('/prices/random/global', [PriceController::class, 'addGlobalItems']);
